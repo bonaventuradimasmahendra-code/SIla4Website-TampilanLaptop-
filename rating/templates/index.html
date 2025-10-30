@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kepuasan Pengguna</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>💬 Form Kepuasan Pengguna</h1>
+    <form action="/add" method="POST" class="form-box">
+      <input type="text" name="nama" placeholder="Masukkan Nama Anda" required>
+      <input type="number" name="rating" min="1" max="5" placeholder="Rating (1-5)" required>
+      <textarea name="kritik" placeholder="Masukkan Kritik/Saran Anda" required></textarea>
+      <button type="submit">Kirim Rating</button>
+      
+    </form>
+
+    <div class="nav-links">
+      <a href="/data">📋 Lihat Data</a>
+      <a href="/statistik">📊 Statistik</a>
+    </div>
+  </div>
+</body>
+</html>

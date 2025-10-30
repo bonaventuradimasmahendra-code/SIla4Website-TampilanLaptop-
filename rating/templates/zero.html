@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidak Ada Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Kontainer Utama -->
+    <div class="container">
+        <h2>⚠️ Belum Ada Data</h2>
+        <p>
+            Saat ini belum ada data yang dapat ditampilkan untuk statistik.
+            Silakan tambahkan data terlebih dahulu melalui halaman <b>Sebelumnya</b>.
+        </p>
+
+        <div class="stats-card">
+            <img src="{{ url_for('static', filename='img/empty_data.svg') }}" 
+                 alt="Tidak Ada Data" 
+                 style="width: 60%; max-width: 250px; opacity: 0.9; margin: 20px 0;">
+            
+            <p style="font-size: 1.1em; color: #fff;">
+                📉 Data belum tersedia karena belum ada partisipasi voting.
+            </p>
+        </div>
+
+        <!-- Tombol Kembali -->
+        <div style="margin-top: 30px;">
+            <a href="/">
+                <button>Kembali</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

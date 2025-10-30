@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistik Rating</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Statistik Rating Pengguna</h1>
+    <div class="stats-card">
+      <p>⭐ Rata-rata Rating: <strong>{{ average|round(2) }}</strong></p>
+      <p>⬆️ Rating Tertinggi: <strong>{{ highest }}</strong></p>
+      <p>⬇️ Rating Terendah: <strong>{{ lowest }}</strong></p>
+    </div>
+    <div class="nav-links">
+      <a href="/">🏠 Kembali</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Batas Voting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card limit-card">
+      <h1>😅 Anda sudah 3x Memilih!</h1>
+      <p>Terima kasih telah berpartisipasi dalam voting.</p>
+      <p>Anda tidak dapat memilih lagi.</p>
+      <div class="button-group">
+        <a href="{{ url_for('index') }}" class="btn-kembali">🏠 Kembali ke Beranda</a>
+        <a href="{{ url_for('result') }}" class="btn-lanjut">📊 Lihat Hasil Voting</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

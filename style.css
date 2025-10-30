@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c62828;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.gbr_ilustrasi {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #ef5350, #e53935);
+    color: white;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+}
+
+
+.content {
+    max-width: 900px;
+    margin: 100px auto 30px; 
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.title_info {
+    position: absolute;
+    font-size: 15px;
+    color: red;
+    right: 300px;
+}
+
+.paragraf_info {
+    position: absolute;
+    font-size: 13px;
+    color: black;
+    right: 275px;
+    margin-top: 25px;
+    line-height: 2;
+}
+
+.content h2 {
+    margin-bottom: 10px;
+    color: #c62828;
+}
+
+.content ul {
+    margin-left: 20px;
+}
+
+.news-card {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 4px solid #c62828;
+    background: #fff3f3;
+    border-radius: 8px;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #c62828;
+    color: white;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+.namaRasya {
+    font-size: 17px;
+    text-align: center;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #c62828;
+        overflow: hidden;
+        max-height: 0;           /* awalnya tertutup */
+        opacity: 0;              /* tidak terlihat */
+        transform: translateY(-10px);
+        transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .nav-links.show {
+        max-height: 300px;       /* tinggi menu */
+        opacity: 1;              /* muncul */
+        transform: translateY(0); /* turun halus */
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .content {
+        margin: 100px 15px 15px;
+    }
+}

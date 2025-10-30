@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buku Mini</title>
+  <style>
+    /* 🔹 Reset dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f4f7fb, #e3ebf5);
+      color: #222;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 🔹 Navigasi */
+    .navbar {
+      background: #bd2f16;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #ffe380;
+      text-shadow: 0 0 5px rgba(255,255,255,0.6);
+    }
+
+    .menu-toggle {
+      display: none;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* 🔹 Header Hero */
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(to right, #d11919, #dd1d1d);
+      color: white;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    /* 🔹 Konten utama */
+    .content {
+      flex: 1;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInUp 1s ease;
+    }
+
+    iframe {
+      width: 90%;
+      max-width: 1000px;
+      height: 80vh;
+      border: 4px solid #cf2424;
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+      background-color: white;
+      transition: 0.4s;
+    }
+
+    iframe:hover {
+      transform: scale(1.01);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    /* 🔹 Animasi */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 🔹 Responsif */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #df1212;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 200px;
+        border-radius: 0 0 10px 10px;
+        overflow: hidden;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      iframe {
+        height: 70vh;
+      }
+    }
+
+    footer {
+      background: #e42b25;
+      color: #fff;
+      text-align: center;
+      padding: 0.7rem 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- 🔹 Navigasi -->
+  <nav class="navbar">
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Beranda</a></li>
+      <li><a href="identitas.html">Identitas Kelompok</a></li>
+      <li><a href="http://192.168.132.121:5000">Game Simulasi Voting</a></li>
+      <li><a href="http://192.168.132.121:8000">Form Kepuasan Pengguna</a></li>
+      <li><a href="Dokumentasi.html">Dokumentasi Proses Pembuatan</a></li>
+      <li><a href="posterInfo.html">Produk Poster dan Infografis Digital</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </nav>
+
+  <!-- 🔹 Hero Section -->
+  <header class="hero">
+    <h1>Produk Buku Mini</h1>
+    <p>“Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan.”</p>
+  </header>
+
+  <!-- 🔹 Konten -->
+  <main class="content">
+    <iframe src="https://simplebooklet.com/pemimpin" title="Simplebooklet Pemimpin" allowfullscreen></iframe>
+  </main>
+
+  <!-- 🔹 Footer -->
+  <footer>
+    © 2025 | Kelompok Demokrasi dan Musyawarah | Semua Hak Dilindungi
+  </footer>
+
+  <!-- 🔹 JavaScript Menu -->
+  <script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  </script>
+</body>
+</html>

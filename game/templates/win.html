@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Voting</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Jika</h1>
+        <h2>{{ session["pilihan"] }} menang</h2>
+        <p class="hasil">{{ hasil_akhir }}</p>
+        <a href="{{ url_for('index') }}" class="back">Kembali ke Halaman Voting</a>
+    </div>
+</body>
+</html>

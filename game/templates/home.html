@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome">
+            <h1>SELAMAT DATANG DI GAME SIMULASI SEDERHANA</h1>
+        </div>
+        <div class="rule">
+            <p>Peraturan :
+                1. User dapat memilih maksimal 3 kali dari kandidat yang sudah ditentukan
+                2. Setelah memilih, user dapat melihat hasil voting yang dipilih
+                3. Hasil terbanyak adalah pemenang
+                4. Terdapat simulasi sederhana dan hasil setelah kandidat terpilih menjadi ketua kelas
+            </p>
+        </div>
+        <div class="lanjut">
+                <a href="{{ url_for('index') }}" class="btn-lanjut">Lanjut</a>
+        </div>
+    </div>
+</body>
+</html>

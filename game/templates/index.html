@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Voting Ketua Kelas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <h1>Pemilihan Ketua Kelas</h1>
+        <p>Pilih kandidat yang menurut Anda paling pantas menjadi ketua kelas!</p>
+
+        <form action="{{ url_for('vote') }}" method="POST" class="vote-form">
+            {% for k in kandidat %}
+            <div class="card">
+                <h2>{{ k["Nama"] }}</h2>
+                <p>Visi: <b>{{ k["Visi"] }}</b></p>
+                <p>Suara saat ini: {{ k["Suara"] }}</p>
+                <button type="submit" name="pilihan" value="{{ k['Nama'] }}">Pilih {{ k["Nama"] }}</button>
+            </div>
+            {% endfor %}
+        </form>
+    </div>
+</body>
+</html>

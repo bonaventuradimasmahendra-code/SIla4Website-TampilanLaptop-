@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selamat!</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card success-card">
+      <div class="checkmark">✔</div>
+      <h1>Selamat!</h1>
+      <p>Anda telah memilih <span>{{ session["Nama"] }}</span></p>
+      <div class="button-group">
+        <a href="{{ url_for('index') }}" class="btn-kembali">🏠 Kembali ke Beranda</a>
+        <a href="{{ url_for('result') }}" class="btn-lanjut">📊 Lihat Hasil Voting</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
