@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -30,3 +31,37 @@
   </div>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Pengguna</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>📋 Data Rating Pengguna</h1>
+    <table>
+      <tr>
+        <th>Nama</th>
+        <th>Rating</th>
+        <th>Kritik/Saran</th>
+      </tr>
+      {% for item in items %}
+      <tr>
+        <td>{{ item[1] }}</td>
+        <td>{{ item[2] }}</td>
+        <td>{{ item[3] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <div class="nav-links">
+      <a href="/">🏠Kembali</a>
+    </div>
+  </div>
+</body>
+</html>
+>>>>>>> 251c0d0 (Update proyek ke versi terbaru)
