@@ -91,10 +91,8 @@ body {
 }
 
 .paragraf_info {
-    position: absolute;
     font-size: 13px;
     color: black;
-    right: 275px;
     margin-top: 25px;
     line-height: 2;
 }
