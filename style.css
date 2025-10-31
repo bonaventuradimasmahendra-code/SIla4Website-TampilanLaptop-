@@ -144,7 +144,7 @@ footer {
     }
 
     .nav-links.show {
-        max-height: 300px;       /* tinggi menu */
+        max-height: 500px;       /* tinggi menu */
         opacity: 1;              /* muncul */
         transform: translateY(0); /* turun halus */
     }
